@@ -7,9 +7,9 @@ import RHL.calculation.model.VehicleDetails;
 import RHL.calculation.repo.VehicleDetailsGetRepo;
 import RHL.calculation.service.VehicleDetailsGetService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import java.util.Optional;
-
+@Service
 public class VehicleDetailsGetServiceImpl implements VehicleDetailsGetService {
     @Autowired
     VehicleDetailsGetRepo vehicleDetailsGetRepo;
