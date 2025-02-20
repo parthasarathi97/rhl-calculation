@@ -24,4 +24,6 @@ public class VehicleDetails {
     private String palletSpaceInVehicle;
     private String freeSpaceInLength;
     private String freeSpaceInWidth;
+    private String vehicleMillage;
+    private String palletPrice;
 }
