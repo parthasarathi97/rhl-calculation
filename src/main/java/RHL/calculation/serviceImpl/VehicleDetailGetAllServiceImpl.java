@@ -41,6 +41,7 @@ public class VehicleDetailGetAllServiceImpl implements VehicleDetailGetAllServic
                     data.setFreeSpaceInWidth(vehicle.getFreeSpaceInWidth());
                     data.setVehicleMillage(vehicle.getVehicleMillage());
                     data.setPalletPrice(vehicle.getPalletPrice());
+                    data.setPalletMaxLoadCapacity(vehicle.getPalletMaxLoad());
                     return data;
                 }).collect(Collectors.toList());
 

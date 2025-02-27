@@ -19,4 +19,5 @@ public class VehicleDetailsData {
     private String freeSpaceInWidth;
     private String vehicleMillage;
     private String palletPrice;
+    private String palletMaxLoadCapacity;
 }
