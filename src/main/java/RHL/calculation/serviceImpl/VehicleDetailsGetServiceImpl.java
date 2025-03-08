@@ -39,6 +39,7 @@ public class VehicleDetailsGetServiceImpl implements VehicleDetailsGetService {
                 data.setFreeSpaceInWidth(vehicle.getFreeSpaceInWidth());
                 data.setVehicleMillage(vehicle.getVehicleMillage());
                 data.setPalletPrice(vehicle.getPalletPrice());
+                data.setPalletMaxLoadCapacity(vehicle.getPalletMaxLoad());
 
                 response.setStatusCode(200);
                 response.setMessage("fetched successfully");
