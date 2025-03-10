@@ -8,8 +8,6 @@ import org.springframework.web.server.ServerWebExchange;
 import org.springframework.web.server.WebFilter;
 import org.springframework.web.server.WebFilterChain;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 @Configuration
@@ -17,12 +15,13 @@ public class CorsConfiguration {
 
     @Bean
     public CorsWebFilter corsWebFilter() {
-        final org.springframework.web.cors.CorsConfiguration corsConfig = new org.springframework.web.cors.CorsConfiguration();
-        corsConfig.setAllowedOrigins(List.of("*"));
+        org.springframework.web.cors.CorsConfiguration corsConfig = new org.springframework.web.cors.CorsConfiguration();
+        corsConfig.setAllowedOriginPatterns(List.of("*")); // Updated method
         corsConfig.setMaxAge(3600L);
-        corsConfig.setAllowedMethods(Arrays.asList("GET", "POST"));
-        corsConfig.addAllowedHeader("*");
-        final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        corsConfig.setAllowedMethods(List.of("GET", "POST"));
+        corsConfig.setAllowedHeaders(List.of("*")); // Consistent approach
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfig);
         return new CorsWebFilter(source);
     }
