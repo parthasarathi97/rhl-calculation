@@ -14,7 +14,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")  // Applies to all endpoints
-                        .allowedOrigins("*")  // Allow all origins (or specify specific ones)
+                        .allowedOrigins("http://localhost:3000", "https://logistics-calculation.netlify.app/")  // Allow all origins (or specify specific ones)
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
