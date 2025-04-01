@@ -13,11 +13,11 @@ public class CorsConfig {
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")  // Applies to all endpoints
-                        .allowedOrigins("http://localhost:3000", "https://logistics-calculation.netlify.app/")  // Allow all origins (or specify specific ones)
-                        .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                        .allowedHeaders("*")
-                        .allowCredentials(true);
+                registry.addMapping("/**") // Apply to all endpoints
+                        .allowedOrigins("*") // Allow all origins
+                        .allowedMethods("*") // Allow all HTTP methods
+                        .allowedHeaders("*") // Allow all headers
+                        .allowCredentials(false); // Should be false when allowing all origins
             }
         };
     }
