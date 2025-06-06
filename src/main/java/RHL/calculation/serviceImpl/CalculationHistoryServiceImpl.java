@@ -42,7 +42,7 @@ public class CalculationHistoryServiceImpl implements CalculationHistoryService 
                     .totalLoadCalculationCost(request.getTotalLoadCalculationCost())
                     .build();
 
-            calculationHistoryRepo.save(data);
+            calculationHistoryRepo.save(data);//saved into calculation repo
             response.setStatusCode(200);
             response.setMessage("Calculation history saved successfully");
         } catch (Exception e) {
